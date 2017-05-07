@@ -1,0 +1,36 @@
+<idea-plugin>
+    <id>de.andrestefanov.idea.opencomputers</id>
+    <name>OpenComputers Plugin</name>
+    <version>0.1</version>
+    <vendor email="mail@andrestefanov.de" url="http://www.yourcompany.com">Andre Stefanov</vendor>
+
+    <description><![CDATA[
+      This plugin allows you to deploy files directly to your OpenComputers computer.
+    ]]></description>
+
+    <change-notes><![CDATA[
+      Initial version.
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="145.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <configurationType implementation="de.andrestefanov.idea.opencomputers.run.OCConfigurationType"/>
+        <toolWindow id="OpenComputers" anchor="bottom" icon="/logo_13x13.png"
+                    factoryClass="de.andrestefanov.idea.opencomputers.toolwindow.OCToolWindowFactory"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+
+</idea-plugin>
